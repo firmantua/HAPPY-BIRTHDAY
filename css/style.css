@@ -9,6 +9,52 @@ body {
   background: #e5e5e5;
   background-image: url("bg.jpg");
 }
+ body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+        }
+        .container {
+            position: relative;
+            width: 80vw;
+            height: 50vh;
+            max-width: 400px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .animated-box {
+            width: 50px;
+            height: 50px;
+            background: blue;
+            position: absolute;
+            animation: moveBox 3s infinite alternate ease-in-out;
+        }
+        @keyframes moveBox {
+            from {
+                left: 10%;
+            }
+            to {
+                left: 80%;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90vw;
+                height: 40vh;
+            }
+            .animated-box {
+                width: 40px;
+                height: 40px;
+            }
+        }
 
 #card-front {
   color: #ffdfdf;
